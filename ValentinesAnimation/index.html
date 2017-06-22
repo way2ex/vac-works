@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>慕课七夕主题</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="Swipe.js"></script>
+  </head>
+  <body>
+    <div class="" id="content">
+      <ul class="content-wrap">
+        <!-- first picture -->
+        <li>picture 1</li>
+        <!-- second picture -->
+        <li>picture 2</li>
+        <!-- third picture -->
+        <li>picture 3</li>
+      </ul>
+      <div class="button">
+        <button type="button" name="button">点击切换页面</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var swipe = Swipe($('#content'));
+      $('button').click(() => {
+        // 调用接口
+        swipe.scrollTo($("#content").width() * 2, 5000);
+      });
+    </script>
+  </body>
+</html>
