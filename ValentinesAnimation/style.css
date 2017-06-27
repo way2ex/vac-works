@@ -1,40 +1,163 @@
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
-ul, li{
-  list-style-type: none;
+
+ul,
+li {
+    list-style-type: none;
 }
+
+
 /* main */
+
 #content {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
 }
 
 .content-wrap {
-  position: relative;
-}
-.content-wrap > li {
-  background: #CAE1FF;
-  color: red;
-  float: left;
-  overflow: hidden;
-  position: relative;
-}
-li:nth-child(2) {
-  background: #9BCD9B;
-}
-li:nth-child(3) {
-  background: yellow;
+    position: relative;
 }
 
-button {
-  width: 100px;
-  height: 50px;
+.content-wrap>li {
+    float: left;
+    overflow: hidden;
+    position: relative;
 }
+
+
+/*人物*/
+
+.charactor {
+    position: absolute;
+    width: 151px;
+    height: 291px;
+    background: url('./images/boy.png') -0px -291px no-repeat;
+    /*设置一个元素的坐标*/
+    left: 6%;
+    top: 55%;
+}
+
+.slowWalk {
+    animation-name: person-slow;
+    animation-duration: 950ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1, start);
+}
+
+
+/*普通慢走*/
+
+@keyframes person-slow {
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: 0px -291px;
+    }
+}
+
+.pauseWalk {
+    animation-play-state: paused;
+}
+
+
+/***************太阳转动及动画********************/
+
+#sun {
+    background: url("./images/sun.png") no-repeat;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    height: 201px;
+    width: 201px;
+    right: 40%;
+}
+
+.rotation {
+    animation-name: rotation;
+    animation-duration: 30s;
+}
+
+@keyframes rotation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(-2000px, 400px);
+    }
+}
+
+
+/******************天空云************************/
+
+.cloud {
+    z-index: 2;
+    position: absolute;
+}
+
+.cloud1 {
+    width: 181px;
+    height: 101px;
+    left: -5%;
+    top: 15%;
+    background: url("./images/cloud1.png");
+}
+
+.cloud2 {
+    width: 301px;
+    height: 140px;
+    right: -5%;
+    background: url("./images/cloud2.png");
+}
+
+.cloud1Anim {
+    animation: smallCloud 30s infinite;
+}
+
+.cloud2Anim {
+    animation: largeCloud 60s infinite;
+}
+
+@keyframes smallCloud {
+    0% {
+        left: -5%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes largeCloud {
+    from {
+        right: -5%;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+/******************天空云 end************************/
+
+button {
+    width: 100px;
+    height: 50px;
+}
+
 .button {
-  position: absolute;
-  bottom: 0;
+    position: absolute;
+    bottom: 0;
 }
