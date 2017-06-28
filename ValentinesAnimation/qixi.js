@@ -3,9 +3,9 @@ var Qixi = function() {
     var config = {
         //音乐的配置
         audio: {
-            enable: true,
-            playURI: "",
-            cycleURL: ""
+            enable: true, // 是否开启音乐
+            playURI: "./music/happy.wav", // 播放的地址
+            cycleURL: "./music/circulation.wav" // 循环播放的地址
         },
         // 人物走动的时间
         setTime: {
@@ -393,7 +393,24 @@ var Qixi = function() {
             }
         }
     }
-
+    /**********************播放音乐***********************/
+    function html5Audio(url, isloop) {
+        var audio = new Audio(url);
+        audio.autoPlay = true;
+        audio.loop = isloop || false;
+        audio.play();
+        return {
+            end: function(callback) {
+                audio.addEventListener('ended', function() {
+                    callback();
+                }, false);
+            }
+        };
+    }
+    var audio1 = html5Audio(config.audio.playURI);
+    audio1.end(function() {
+        html5Audio(config.audio.cycleURL, true);
+    });
     var boy = BoyWalk();
     var shop = shop();
 
