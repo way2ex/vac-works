@@ -15,7 +15,7 @@ function Swipe(container) {
     var swipe = {};
 
     // li页面的数量
-    var slides = element.find('li');
+    var slides = element.find('>');
 
     // 获取容器的尺寸
     var width = container.width();

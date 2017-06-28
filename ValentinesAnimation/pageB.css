@@ -52,3 +52,35 @@
     background: url("./images/door-right.png");
     background-size: 100% 100%;
 }
+
+
+/*鸟的动画*/
+
+.bird {
+    position: absolute;
+    min-width: 91px;
+    min-height: 71px;
+    top: 10%;
+    right: -91px;
+    z-index: 10;
+    background: url("./images/bird.png") -182px 0px no-repeat;
+}
+
+.birdFly {
+    animation: bird-slow 400ms step-start infinite;
+}
+
+@keyframes bird-slow {
+    0% {
+        background-position: -182px 0px;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    75% {
+        background-position: -91px 0px;
+    }
+    100% {
+        background-position: -182px 0px;
+    }
+}
