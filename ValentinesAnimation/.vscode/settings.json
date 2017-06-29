@@ -1,4 +1,9 @@
 {
     "eslint.enable": false,
-    "jshint.enable": false
+    "jshint.enable": false,
+    "files.associations": {
+        // extension name : html
+        "*.ejs": "html",
+        "*.js": "html"
+    }
 }
