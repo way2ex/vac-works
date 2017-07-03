@@ -35,7 +35,7 @@
     position: absolute;
     width: 151px;
     height: 291px;
-    right: 40%;
+    right: 39%;
     top: 37%;
     background: url("./images/girl.png");
 }
@@ -235,6 +235,7 @@
     position: absolute;
     opacity: 0;
     animation: mysnow 20s;
+    width: 80px;
     height: 80px;
 }
 

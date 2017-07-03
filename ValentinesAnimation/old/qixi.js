@@ -1,11 +1,13 @@
+var $;
+var Swipe;
 var Qixi = function() {
     // 将变量以配置对象的形式保存
     var config = {
         //音乐的配置
         audio: {
             enable: true, // 是否开启音乐
-            playURI: "./music/happy.wav", // 播放的地址
-            cycleURL: "./music/circulation.wav" // 循环播放的地址
+            playURI: "./old/music/happy.wav", // 播放的地址
+            cycleURL: "./old/music/circulation.wav" // 循环播放的地址
         },
         // 人物走动的时间
         setTime: {
@@ -22,12 +24,12 @@ var Qixi = function() {
             waitFlower: 800
         },
         snowFlowerURI: [
-            './images/snowflake/snowflake1.png',
-            './images/snowflake/snowflake2.png',
-            './images/snowflake/snowflake3.png',
-            './images/snowflake/snowflake6.png',
-            './images/snowflake/snowflake5.png',
-            './images/snowflake/snowflake4.png'
+            './old/images/snowflake/snowflake1.png',
+            './old/images/snowflake/snowflake2.png',
+            './old/images/snowflake/snowflake3.png',
+            './old/images/snowflake/snowflake6.png',
+            './old/images/snowflake/snowflake5.png',
+            './old/images/snowflake/snowflake4.png'
         ]
     }; // 变量end
     var instanceX;
@@ -148,7 +150,6 @@ var Qixi = function() {
     /*************商店门与灯的动画******************/
     var shop = function() {
         var defer = $.Deferred();
-        var $door = $('.door');
         var doorLeft = $('.door-left');
         var doorRight = $('.door-right');
         // 定义门的动作
