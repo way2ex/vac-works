@@ -122,6 +122,7 @@ module.exports = {
         "no-duplicate-imports": "error",
         "no-else-return": "off",
         "no-empty-function": "off",
+        "no-empty": "off",
         "no-eq-null": "off",
         "no-eval": [
             "error",
@@ -291,7 +292,7 @@ module.exports = {
         "space-infix-ops": "error",
         "space-unary-ops": "error",
         "spaced-comment": "off",
-        "strict": "error",
+        "strict": "warn",
         "switch-colon-spacing": "error",
         "symbol-description": "error",
         "template-curly-spacing": "error",
