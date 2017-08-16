@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>左边定宽，右边自适应</title>
+	<!-- <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script> -->
+	<style>
+		/* 基本样式 */
+
+		.wrapper {
+			padding: 15px 20px;
+			border: 1px dashed #ff6c60;
+		}
+
+		.left {
+			width: 120px;
+			border: 5px solid #ddd;
+		}
+
+		.right {
+			margin-left: 20px;
+			border: 5px solid #ddd;
+		}
+		/*********** 两个都使用inline-block,右侧计算宽度 ******************/
+
+		.wrapper-inline-block {
+			box-sizing: content-box;
+			font-size: 0;
+		}
+
+		.wrapper-inline-block .left,
+		.wrapper-inline-block .right {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 14px;
+			box-sizing: border-box;
+		}
+
+		.wrapper-inline-block .right {
+			width: calc(100% - 140px);
+		}
+		/********************左右均float, 然后右侧计算宽度 ***********************/
+
+		.wrapper-double-float {
+			overflow: auto;
+			box-sizing: content-box;
+		}
+
+		.wrapper-double-float .left,
+		.wrapper-double-float .right {
+			float: left;
+			box-sizing: border-box;
+		}
+
+		.wrapper-double-float .right {
+			width: calc(100% - 140px);
+		}
+		/********************左侧float，右侧block，右侧计算margin-left,需要清除浮动 ***********************/
+
+		.wrapper-float {
+			overflow: hidden;
+		}
+
+		.wrapper-float .left {
+			float: left;
+		}
+
+		.wrapper-float .right {
+			display: block;
+			margin-left: 150px;
+		}
+		/********************左侧float，设置margin-right，右侧应用BFC来消除与左侧的重叠 ***********************/
+
+		.wrapper-float-bfc {
+			overflow: auto;
+		}
+
+		.wrapper-float-bfc .left {
+			float: left;
+			margin-right: 20px;
+		}
+
+		.wrapper-float-bfc .right {
+			margin-left: 0;
+			overflow: auto;
+		}
+		/********************左侧position:absolute，右侧通过计算设置margin-left***********************/
+
+		.wrapper-absolute .left {
+			position: absolute;
+		}
+
+		.wrapper-absolute .right {
+			margin-left: 140px;
+		}
+		/********************flex***********************/
+
+		.wrapper-flex {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.wrapper-flex .left {
+			flex: 0 0 auto;
+		}
+
+		.wrapper-flex .right {
+			flex: 1 1 auto;
+		}
+		/******************** grid ***********************/
+
+		.wrapper-grid {
+			display: grid;
+			grid-template-columns: 120px 1fr;
+			align-items: start;
+		}
+
+		.wrapper-grid .left {
+			grid-column: 1;
+		}
+
+		.wrapper-grid .right {
+			grid-column: 2;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="padding: 20px 20px;">
+		<span style="color: #ff6c60;">选择不同的方案查看效果:</span>
+		<select id="select">
+			<option value="0">双inline-block方案</option>
+			<option value="1">双float方案</option>
+			<option value="2">float+margin-left方案</option>
+			<option value="4">absolute+margin-left方案</option>
+			<option value="3">float+BFC方案</option>
+			<option value="5">flex方案</option>
+			<option value="6">grid方案</option>
+		</select>
+	</div>
+	<div class="wrapper wrapper-inline-block" id="wrapper">
+		<div class="left">
+			左边固定宽度，高度不固定,</br>
+			</br>
+			</br>
+			</br>
+			高度有可能会很小，也可能很大。
+		</div>
+		<!--  -->
+		<div class="right">
+			<ol>
+				<li>
+					<h4>使用双inline-block方法</h4>
+					<p>
+						这种方法是通过<code>width: calc(100% - 120px)</code>来动态计算右边div的宽度。需要右边div距离父容器左边框的距离，还需要知道父容器的padding，以此计算父容器宽度需要减去的数值。
+					</p>
+					<strong>缺点：</strong>
+					<ul>
+						<li>代码太多，需要设置父容器和子元素的 <code>box-sizing</code> </li>
+						<li>为了准确地应用计算出来的宽度，需要消除div之间的空格，需要使用父容器的<code>font-size: 0;</code>,用注释消除html中的空格等方法</li>
+						<li>因为两个div都是用了 <code>display:inline-block</code>, 所以需要设置 <code>vertical-align: top</code> 来实现顶端对齐。 </li>
+					</ul>
+				</li>
+				<li>
+					<h4>使用左右div均float的方法</h4>
+					<p>
+						这种方法也是是通过<code>width: calc(100% - 120px)</code>来动态计算右边div的宽度。由于float元素之间不重叠，所以不需要计算 <code>margin-left</code> 。 而且不是
+						<code>inline-block</code>，无需设置 <code>vertical-align:top</code>。
+					</p>
+					<strong>优点：</strong>
+					<ul>
+						<li>无需考虑html代码中的空白 </li>
+						<li>无需使用 <code>vertical-align:top</code></li>
+					</ul>
+					<strong>缺点：</strong>
+					<ul>
+						<li>父元素需要清除浮动 </li>
+						<li>需要通过左侧div的宽度来计算右侧div的宽度</li>
+					</ul>
+				</li>
+				<li>
+					<h4>使用float+margin-left方法</h4>
+					<p>
+						这种方法是利用<code>block</code>水平的元素的宽度自适应的特性，通过预留左侧距离来实现右侧自适应宽度的效果
+					</p>
+					<strong>优点：</strong>
+					<ul>
+						<li>应该是没有啥</li>
+					</ul>
+					<strong>缺点：</strong>
+					<ul>
+						<li>为了避免父元素塌陷，需要清除浮动。 </li>
+						<li>需要手动设置左侧为定宽元素预留的距离。这个距离应该是左侧元素的宽度加上两个元素之间的距离。</li>
+					</ul>
+				</li>
+				<li>
+					<h4>使用absolute+margin-left方法</h4>
+					<p>利用左侧的绝对定位，来使右侧的block元素忽略其的存在，然后设置右侧div的 <code>margin-left</code>来保持距离。
+					</p>
+					<strong>优点：</strong>
+					<ul>
+						<li>代码简单</li>
+						<li>无需清除浮动 </li>
+					</ul>
+					<strong>缺点：</strong>
+					<ul>
+						<li>需要计算保留的距离 </li>
+						<li>使用了绝对定位，某些复杂的应用场景可能会对其他元素的布局产生影响。比如，如果在某个容器中使用，则需要更改容器的 <code>position</code>。</li>
+					</ul>
+				</li>
+				<li>
+					<h4>使用float+BFC方法</h4>
+					<p>
+						这种方法是利用<code>block</code>水平的元素的宽度自适应的特性，以及BFC的特性。由于右侧div形成了BFC，根据
+						<a href="https://www.w3.org/TR/CSS21/visuren.html#bfc-next-to-float">CSS标准</a> 所以其不能与左侧浮动的元素有任何重叠。 </p>
+					<p>这应该是三种方式中比较简单的一种。</p>
+					<strong>优点：</strong>
+					<ul>
+						<li>代码简单，对其他位置的布局影响小。 </li>
+					</ul>
+					<strong>缺点：</strong>
+					<ul>
+						<li>为了避免父元素塌陷，需要清除浮动。 </li>
+					</ul>
+				</li>
+				<li>
+					<h4>使用flex方法</h4>
+					<p> <code>flex</code>布局使用简单，效果还好。 </p>
+					<strong>优点：</strong>
+					<ul>
+						<li>代码简单，效果好</li>
+					</ul>
+					<strong>缺点：</strong>
+					<ul>
+						<li>不支持低版本浏览器</li>
+					</ul>
+				</li>
+				<li>
+					<h4>使用grid方法</h4>
+					<p> <code>grid</code>布局使用简单，效果还好。有 <code>flex</code> 就够了，用 <code>grid</code>有点大材小用。</p>
+					<p>不过，<code>grid</code>还有一个值得注意的小地方和<code>flex</code>不同:在使用margin-left的时候，grid布局默认是box-sizing设置的宽度之间的位置。而flex则是使用两个div的border之间的距离。 </p>
+					<strong>优点：</strong>
+					<ul>
+						<li>代码简单，效果好</li>
+					</ul>
+					<strong>缺点：</strong>
+					<ul>
+						<li>不支持低版本浏览器</li>
+					</ul>
+				</li>
+			</ol>
+			<h4>关于极限情况</h4>
+			<p>
+				最后可以再看一下在父容器极限小的情况下，不同方案的表现。主要分成三种情况：
+				<ul>
+					<li>
+						<h5>动态计算宽度的情况</h5>
+						<p>动态计算宽度的情况有两种: 双inline-block方案和双float方案。宽度极限小时，右侧的div宽度会非常小，由于遵循流动布局，所以右侧div会移动到下一行。</p>
+					</li>
+					<li>
+						<h5>计算右侧margin-left的情况</h5>
+						<p>计算右侧margin-left的情况有两种: float+margin-left方案和absolute+margin-left方案。宽度极限小时，由于右侧的div忽略了文档流中左侧div的存在，所以其依旧会存在于这一行，并被隐藏。</p>
+					</li>
+					<li>
+						<h5>float+BFC方案</h5>
+						<p>这种情况下，由于BFC与float的特殊关系，右侧div在宽度减小到最小后，也会掉落到下一行。</p>
+					</li>
+					<li>
+						<h5>flex和grid的情况</h5>
+						<p>这种情况下，默认两种布局方式都不会放不下的div移动到下一行。不过 <code>flex</code>布局可以通过 <code>flex-flow: wrap;</code>来设置多余的div移动到下一行。
+							<code>grid</code>布局暂不支持。
+						</p>
+					</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+	<script>
+		document.querySelector('#select').addEventListener('change', function (event) {
+			var value = event.target.value
+			var wrapper = document.querySelector('#wrapper')
+			switch (+value) {
+				case 0: wrapper.className = 'wrapper wrapper-inline-block';
+					break;
+				case 1: wrapper.className = 'wrapper wrapper-double-float';
+					break;
+				case 2: wrapper.className = 'wrapper wrapper-float';
+					break;
+				case 3: wrapper.className = 'wrapper wrapper-float-bfc ';
+					break;
+				case 4: wrapper.className = 'wrapper wrapper-absolute';
+					break;
+				case 5: wrapper.className = 'wrapper wrapper-flex';
+					break;
+				case 6: wrapper.className = 'wrapper wrapper-grid';
+					break;
+			}
+		})
+	</script>
+</body>
+
+</html>
