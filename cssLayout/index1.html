@@ -69,7 +69,6 @@
 		}
 
 		.wrapper-float .right {
-			display: block;
 			margin-left: 150px;
 		}
 		/********************左侧float，设置margin-right，右侧应用BFC来消除与左侧的重叠 ***********************/
@@ -94,7 +93,7 @@
 		}
 
 		.wrapper-absolute .right {
-			margin-left: 140px;
+			margin-left: 150px;
 		}
 		/********************flex***********************/
 
@@ -116,6 +115,11 @@
 			display: grid;
 			grid-template-columns: 120px 1fr;
 			align-items: start;
+		}
+
+		.wrapper-grid .left,
+		.wrapper-grid .right {
+			box-sizing: border-box;
 		}
 
 		.wrapper-grid .left {
@@ -141,6 +145,14 @@
 			<option value="6">grid方案</option>
 		</select>
 	</div>
+	<div style="padding: 20px;">
+		<span style="color: #ff6c60;">选择右侧不同的高度:</span>
+		<select name="" id="changeHeight">
+			<option value="1">右侧很低</option>
+			<option value="0">右侧很高</option>
+		
+		</select>
+	</div>
 	<div class="wrapper wrapper-inline-block" id="wrapper">
 		<div class="left">
 			左边固定宽度，高度不固定,</br>
@@ -151,7 +163,9 @@
 		</div>
 		<!--  -->
 		<div class="right">
-			<ol>
+			这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+			基本的样式是，两个div相距20px, 左侧div宽 120px
+			<!-- <ol>
 				<li>
 					<h4>使用双inline-block方法</h4>
 					<p>
@@ -275,13 +289,13 @@
 						</p>
 					</li>
 				</ul>
-			</p>
+			</p> -->
 		</div>
 	</div>
 	<script>
+		var wrapper = document.querySelector('#wrapper')
 		document.querySelector('#select').addEventListener('change', function (event) {
 			var value = event.target.value
-			var wrapper = document.querySelector('#wrapper')
 			switch (+value) {
 				case 0: wrapper.className = 'wrapper wrapper-inline-block';
 					break;
@@ -296,6 +310,16 @@
 				case 5: wrapper.className = 'wrapper wrapper-flex';
 					break;
 				case 6: wrapper.className = 'wrapper wrapper-grid';
+					break;
+			}
+		})
+		var rightDiv = document.querySelector('.right')
+		document.querySelector('#changeHeight').addEventListener('change', function (event) {
+			var value = event.target.value
+			switch (+value) {
+				case 0: rightDiv.style.height = "700px";
+					break;
+				case 1: rightDiv.style.height = "auto";
 					break;
 			}
 		})
