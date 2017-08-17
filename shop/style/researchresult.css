@@ -1,0 +1,138 @@
+.sr_paramul .para_checked{
+  color: red;
+  font-weight: bolder;
+}
+hr{
+  margin: 15px 0 10px 0;
+  border-color: #0fa6f0;
+}
+#sr_notation{
+  font-family: SimSun;
+  font-style: normal;
+  color: #666;
+  height: 24px;
+}
+.allresult a{
+  color: #666;
+  line-height: 24px;
+}
+.allresult a:hover{
+  color: #e4393c;
+}
+.right_arrow{
+  margin: 0 0px;
+  line-height: 24px;
+}
+#searchkey{
+  height: 24px;
+  line-height: 24px;
+}
+#huaweipng{
+  display: block;
+  width: 1200px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.sr_parameters{
+  height: 22px;
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 0 0px 0 4px;
+}
+
+.sr_parameters em{color: #e4393c;font-style: normal;}
+.sr_parameters i{
+  vertical-align: bottom;
+  display: inline-block;
+  background: url(../sr_images/search.ele.png) no-repeat 7px -140px;
+  height: 22px;
+  width: 25px;
+}
+a.sr_parameters:hover{
+  border: 1px solid #e4393c;
+}
+a.sr_parameters:hover i{
+  background-color: #e4393c;
+  background-position:7px -158px;
+}
+.sr_brand{
+  border-top: 1px solid #ddd;
+}
+.paramdiv{
+  border-bottom: 1px solid #ddd;
+}
+div.brand_param{
+  font-weight: bold;
+}
+div.otherparam,div.brand_param{
+  line-height: 34px;
+  width: 100px;
+  background-color: #f3f3f3;
+  padding-left:10px;
+  display: inline-block;
+  font-size: 13px;
+}
+.sr_paramul ,.screen{
+  display: inline-block;
+  line-height: 34px;
+}
+.sr_paramul li{
+display: inline-block;
+  width: auto;
+  margin-right: 30px;
+}
+.screen li a,.sr_paramul li a{
+  color: #005aa0;
+}
+.sr_paramul li a:hover,.screen li a:hover{
+  color:#f00;
+}
+.screen li{
+  display: inline-block;
+  margin-right: 60px;
+}
+
+/*list of the goods */
+.sr_resultlist{
+  position: relative;
+  margin-top: 15px;
+  padding: 0px 0px 0 0px;
+}
+.sr_resultitem{
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  border: 1px solid transparent;
+  margin: 15px 7px;
+  /*box-shadow: 1px 1px;*/
+}
+.sr_resultitem:hover{
+  border: 1px solid #ddd;
+  top: -5px;
+}
+.goodsname,.sr_goodsprice,.commentperson{
+  margin: 0 10px;
+  color: #666;
+}
+.goodsname{display: block;}
+.sr_goodsprice em{
+  color: #e4393c;
+  font-weight: 550;
+  font-style: normal;
+  font-family: Verdana;
+  font-size: 16px;
+}
+.sr_goodsprice i{
+  color: #e4393c;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+.goodsname em{
+  font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+  color: #f00;
+}
+.goodsname i{
+  font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+  color: #666;
+}

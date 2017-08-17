@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>购物车_追梦者</title>
+    <link rel="stylesheet" href="style/goodsdetail.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/reset.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title">
+</head>
+
+<body>
+    <!-- top of page -->
+    <div class="sup-pagetop outerdiv clearfix">
+        <div class="pagetop carttop clearfix" id="pagetop">
+            <a href="index.html" class="home fl">追梦者首页</a>
+            <ul class="fr ul-h" id="pagetop-ul">
+                <li class="topli" id="topli_register"><a href="register.html">注册</a></li>
+                <li class="topli" id="topli_login"><a href="login.html">登陆</a></li>
+                <li class="topli has-line my-order"><a href="myorders.html">我的订单</a></li>
+                <li class="topli has-line shopping-cart"><a href="cart.html">购物车</a></li>
+                <li class="topli has-line has-icon custom-service"><a href="">客户服务</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- top logo and search -->
+    <div class=" div-900 clearfix">
+        <div class="top-search div-900 clearfix">
+            <div id="logo">
+                <a href="index.html"></a>
+            </div>
+            <div id="search-div" class="clearfix fr">
+                <form>
+                    <input type="text" class="fl" id="searchbox">
+                    <input type="button" class="search-btn fl" id="search-btn" value="搜 索">
+                </form>
+                <script type="text/javascript" src = "js/search_btn.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- div to show if the user didn't login -->
+    <div class="nologindiv div-900" id="notation_login">
+        <span>
+        </span> 您还没有登陆！
+        <a href="login.html">立即登陆</a>
+    </div>
+    <!-- <script type="text/javascript" src = "js/showLoginNotation.js"> -->
+    <!-- <script type="text/javascript" src="js/checklogin.js"></script> -->
+    <!-- div for all the orders -->
+    <div class="cart_ordertitle div-900">
+        <div class="ordertitle_all">
+            <input type="checkbox" class="checkall">
+            <span>全选</span>
+        </div>
+        <span class="ordertitle_goods">
+          商品
+        </span>
+        <span class="ordertitle_param">参数</span>
+        <span class="ordertitle_price">单价(元)</span>
+        <span class="ordertitle_count">数量</span>
+        <span class="ordertitle_total">小计(元)</span>
+        <span class="ordertitle_operation">操作</span>
+    </div>
+
+    <div class="" id="cart_goodsdiv">
+        <div class="cart_ordergoods div-900" id="first_goodsdiv" style="display:none;">
+            <input type="checkbox" class="checkthis">
+            <div class="ordergoods_detail">
+                <a href="" class="image_a"><img src="sr_images/566942bdN447abba1.jpg" alt="" /></a>
+                <div class="ordergoods_detail1">
+                    <a href="">荣耀 畅玩5X 破晓银 移动4G手机 双卡双待</a>
+                </div>
+            </div>
+            <div class="ordergoods_param">
+                <div class="ordergoods_param_1">
+                    颜色：破晓银
+                </div>
+                <div class="ordergoods_param_2">
+                    网络：移动4G
+                </div>
+            </div>
+            <div class="ordergoods_price">
+                <span>￥<span class="singleprice">0</span>.00</span>
+            </div>
+            <div class="ordergoods_count">
+                <a href="" class="cart_decreasecount" style="display:none;">-</a>
+                <input type="text" class="input_count" value="1" disabled="disabled">
+                <a href="" class="cart_addcount" style="display:none;">+</a>
+            </div>
+            <div class="ordergoods_total">
+                <strong>￥<strong class="totalmoney">0</strong>.00</strong>
+            </div>
+            <div class="ordergoods_operation">
+                <a href="" class="delete_order">删除</a>
+            </div>
+        </div>
+    </div>
+    <div class="">
+
+    </div>
+    <div class="gobalance div-900 clearfix">
+              <a href="#" class="fr">
+                <b class="gobalance_go fr">
+                  去结算
+                </b>
+              </a>
+              <div class="gobalance_total fr">
+                共付费
+                <span>￥<em id="total_money">0</em><em>.00</em></span>
+                元
+              </div>
+              <div class="fr gobalance_goods">
+                共 <span class="gobalance_goodscount" id="total_account">0</span> 件商品
+              </div>
+    </div>
+    <script type="text/javascript" src = "js/init_cart.js">
+
+    </script>
+    <!-- 底部栏 -->
+    <footer class="clearfix">
+        <div class="footerlogo fl">
+            <img src="images/footerlogo.jpg" alt="" />
+        </div>
+        <div class="foot_link fl">
+            <dl class="link_company">
+                <dt>公司</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/us" target="_blank">关于我们</a></dd>
+                <dd><a rel="nofollow" href="http://job.mogujie.com/social" target="_blank">招聘信息</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/about" target="_blank">联系我们</a></dd>
+            </dl>
+            <dl class="link_consumer">
+                <dt>消费者</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help" target="_blank">消费者服务</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help/contactus?con=%27callservice%27" target="_blank">意见反馈</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/apps/mobile" target="_blank">手机版下载</a></dd>
+            </dl>
+            <dl class="link_business">
+                <dt>商家</dt>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/joinmarket" target="_blank">商家入驻</a></dd>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/shopadmin/shopface" target="_blank">商家后台</a></dd>
+                <dd><a rel="nofollow" href="http://peixun.xiaodian.com" target="_blank">蘑菇商学院</a></dd>
+                <dd><a rel="nofollow" href="http://bbs.xiaodian.com" target="_blank">商家社区</a></dd>
+            </dl>
+        </div>
+    </footer>
+</body>
+
+</html>

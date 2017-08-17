@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>商品详情_追梦者</title>
+    <link rel="stylesheet" href="style/goodsdetail.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/reset.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title">
+  </head>
+  <body>
+    <!-- top of page -->
+    <div class="sup-pagetop outerdiv clearfix">
+        <div class="pagetop innerdiv clearfix" id="pagetop">
+            <a href="#" class="home fl">追梦者首页</a>
+            <ul class="fr ul-h" id="pagetop-ul">
+              <li class="topli" id="topli_register"><a href="register.html" >注册</a></li>
+              <li class="topli" id="topli_login"><a href="login.html" >登陆</a></li>
+              <li class="topli has-line my-order"><a href="myorders.html">我的订单</a></li>
+              <li class="topli has-line shopping-cart"><a href="cart.html">购物车</a></li>
+              <li class="topli has-line has-icon custom-service"><a href="#">客户服务</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/checklogin.js"></script>
+    <!-- top logo and search -->
+    <div class=" outerdiv clearfix">
+        <div class="top-search innerdiv clearfix">
+            <div id="logo">
+                <a href="index.html"></a>
+            </div>
+            <div id="search-div" class="clearfix">
+                <div class="searchbox clearfix">
+                    <input type="text" class="fl" id="searchbox">
+                    <input type="button" class="search-btn fl" id="search-btn" value="搜 索">
+                </div>
+                <div id="hot-search">
+                    <a href="" class="hotword">华为P9</a>
+                    <a href="" class="hotword">荣耀NOTE8</a>
+                    <a href="" class="hotword">三星S7</a>
+                    <a href="" class="hotword">iphone7</a>
+                    <a href="" class="hotword">小米5S</a>
+                    <a href="" class="hotword">锤子M1</a>
+                    <a href="" class="hotword">魅族PRO6</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <script type="text/javascript" src = "js/search_btn.js"></script>
+    <!-- the detail of the goods -->
+    <div class="div-900 clearfix">
+      <div class="detail_goodsphoto clearfix">
+        <div id="photo">
+          <img src="sr_images/detail1.jpg" id="photo_img" alt="" />
+        </div>
+        <div id="microphoto">
+          <span id="detail_prepic"></span>
+          <div id="detail_photodiv">
+            <ul id="detail_photoul">
+              <li class="photo_li_checked"><img src="sr_images/detail1_1.jpg" alt="" /></li>
+              <li><img src="sr_images/detail2_1.jpg" alt="" /></li>
+              <li><img src="sr_images/detail3_1.jpg" alt="" /></li>
+              <li><img src="sr_images/detail4_1.jpg" alt="" /></li>
+              <li><img src="sr_images/detail5_1.jpg" alt="" /></li>
+              <li><img src="sr_images/detail1_1.jpg" alt="" /></li>
+              <li><img src="sr_images/detail2_1.jpg" alt="" /></li>
+              <li><img src="sr_images/detail3_1.jpg" alt="" /></li>
+            </ul>
+          </div>
+          <span id="detail_nextpic"></span>
+        </div>
+      </div><!--
+   --><div class="detail_goodsdetail">
+        <p class="detail_name" id="p_fullname">
+          荣耀 畅玩5X 3GB内存版 落日金 移动联通电信4G手机 双卡双待
+        </p>
+        <p class="detail_description" id="p_descript">32G/64G内存可选 5.2英寸 双摄像头
+           8核 4G手机 荣耀8手机流光金3G+32GB原封未拆双网通
+         </p>
+         <div class="detail_price clearfix">
+           <div class="fl detail_price1">
+             <span id="detail_price_text">价格：</span>
+             <strong ><em>￥</em><strong id="em_price">1968.00</strong></strong>
+           </div>
+           <div class="fr detail_price2">
+             <span>累计评价</span>
+             <a href="#" id="a_commenumber">25万+</a>
+           </div>
+         </div>
+
+         <ul class="detail_color" id="chooseColor_ul">
+           <span>选择颜色</span>
+           <!-- <li><a href="#">落日金</a></li>
+           <li><a href="#">破晓银</a></li>
+           <li><a href="#">暗夜灰</a></li>
+           <li><a href="#">雪花白</a></li> -->
+         </ul>
+         <ul class="detail_net">
+           <span>选择版本</span>
+           <div class="" id="network_li_div">
+             <!-- <li><a href="">全网通</a></li>
+             <li><a href="">移动4G</a></li>
+             <li><a href="#">联通4G</a></li>
+             <li><a href="#">电信4G</a></li>
+             <li><a href="#">移动3G</a></li>
+             <li><a href="#">联通3G</a></li>
+             <li><a href="#">电信3G</a></li> -->
+           </div>
+         </ul>
+         <div class="buydiv">
+           <div class="">
+             <input type="text" class = "fl" id = "detail_ordercount" value="1" >
+             <div class="buydiv_2">
+               <a href="" id="addcount">+</a>
+               <a href="" id="reducecount">-</a>
+             </div>
+           </div>
+           <a href="" id ="order_submit">加入购物车</a>
+           <a href="" id = "gotocart">去购物车结算<span></span></a>
+         </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/init_goods_detail.js"></script>
+    <!-- comments of the goods from users-->
+    <div class="div-900 detail_comment">
+      <div class="comment_1">
+        商品评价
+      </div>
+      <div class="comment_detail comment_model">
+        <div class="comment_text">
+          <div class="comment_star">
+          </div>
+          <p>
+            T和i是这是一个非常好的手机
+          </p>
+        </div>
+        <div class="comment_source">
+          <div class="comment_user">
+            <img src="sr_images/comment_user.gif" alt="" />
+            <span class="username">vac</span>
+          </div>
+          <div>
+            <span class="commentuser_grade">金牌会员</span><br>
+            <span class="commentuser_from">2016-10-10</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 底部栏 -->
+    <footer class="clearfix">
+        <div class="footerlogo fl">
+            <img src="images/footerlogo.jpg" alt="" />
+        </div>
+        <div class="foot_link fl">
+            <dl class="link_company">
+                <dt>公司</dt>
+                <dd><a rel="nofollow" target="_blank">关于我们</a></dd>
+                <dd><a rel="nofollow" target="_blank">招聘信息</a></dd>
+                <dd><a rel="nofollow"  target="_blank">联系我们</a></dd>
+            </dl>
+            <dl class="link_consumer">
+                <dt>消费者</dt>
+                <dd><a rel="nofollow"  target="_blank">消费者服务</a></dd>
+                <dd><a rel="nofollow" target="_blank">意见反馈</a></dd>
+                <dd><a rel="nofollow" target="_blank">手机版下载</a></dd>
+            </dl>
+            <dl class="link_business">
+                <dt>商家</dt>
+                <dd><a rel="nofollow" target="_blank">商家入驻</a></dd>
+                <dd><a rel="nofollow" target="_blank">商家后台</a></dd>
+                <dd><a rel="nofollow"  target="_blank">追梦商学院</a></dd>
+                <dd><a rel="nofollow"  target="_blank">商家社区</a></dd>
+            </dl>
+        </div>
+    </footer>
+
+    <script src = "js/detail.js"></script>
+    <script src = "js/loadcomment.js"></script>
+  </body>
+</html>

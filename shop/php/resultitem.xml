@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="sr_resultitem">
+  <a href="#">
+    <img src="sr_images/goods1.jpg" alt="" />
+  </a>
+
+  <div class="sr_goodsprice">
+    <em>￥</em>
+    <i>999.00</i>
+  </div>
+
+  <a class="goodsname" href="#">
+    <i>畅想5S 金色 移动4G手机 双卡双待</i>
+  </a>
+  
+  <div class="commentperson">
+    <span>已有</span>
+    <strong>23万+</strong>
+    <span>人评价</span>
+  </div>
+
+</div>
+
+<items>
+<item>
+<name>华为 HUAWEI Mate7 全网通 荣耀金</name>
+<price>3099</price>
+<number>250</number>
+<p200>phone_images/huaweimate7/huaweimate8200x200.jpg</p200>
+</item>
+</items>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>我的订单_追梦者</title>
+    <link rel="stylesheet" href="style/reset.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/goodsdetail.css" media="screen" title="no title">
+  </head>
+  <body class="body_userinfo">
+    <!-- top of page -->
+    <div class="sup-pagetop outerdiv clearfix">
+        <div class="pagetop carttop clearfix" id="pagetop">
+            <a href="index.html" class="home fl">追梦者首页</a>
+            <ul class="fr ul-h" id="pagetop-ul">
+                <li class="topli" id="topli_register"><a href="register.html">注册</a></li>
+                <li class="topli" id="topli_login"><a href="login.html">登陆</a></li>
+                <li class="topli has-line my-order"><a href="myorders.html">我的订单</a></li>
+                <li class="topli has-line shopping-cart"><a href="cart.html">购物车</a></li>
+                <li class="topli has-line has-icon custom-service"><a href="">客户服务</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- top logo and search -->
+    <div class=" outerdiv clearfix biglogo_div">
+        <div class="top-search div-990 clearfix">
+            <div id="logo">
+                <a href="index.html"></a>
+            </div>
+        </div>
+    </div>
+    <!-- div to show if the user didn't login -->
+    <div class="nologindiv div-900" id="notation_login">
+        <span>
+        </span> 您还没有登陆！
+        <a href="login.html">立即登陆</a>
+    </div>
+
+    <!-- <script type="text/javascript" src="js/showLoginNotation.js"></script> -->
+
+    <div class="myorders_title div-990">
+      <span>我的订单</span>
+    </div>
+    <div class="myorders02">
+      <div class="myorders_select">
+        <a href="#" id="all_orders" class="selected_orderstype">全部订单</a>
+        <a href="#" id="waiting_for_accept">待收货</a>
+        <a href="#" id="waiting_for_comment">待评价</a>
+        <div class="orders_search">
+          <input type="text" name="name" value="商品编号/订单号" class="orders_searchbox">
+          <a href="#" id="orders_search_button"><b></b></a>
+        </div>
+      </div>
+
+      <div class="orders_list">
+        <div class="list_header clearfix">
+          <div class="ordertime fl">
+              <div class="time_txt">
+                2013年以前订单
+                <b></b>
+              </div>
+              <div class="time_list">
+                <ul>
+                  <li><a href="#">近三个月订单</a></li>
+                  <li><a href="#">今年内订单</a></li>
+                  <li><a href="#">2015年订单</a></li>
+                  <li><a href="#">2014年订单</a></li>
+                  <li><a href="#">2013年订单</a></li>
+                  <li><a href="#">2013年以前订单</a></li>
+                </ul>
+              </div>
+          </div>
+          <div class="header_orderdetail fl">
+            订单详情
+          </div>
+          <div class="header_orderreceiver fl">
+            收货人
+          </div>
+          <div class="header_ordertotal fl">
+            金额
+          </div>
+          <div class="header_orderstate fl">
+            <div class="state_select">
+              全部状态
+              <b></b>
+            </div>
+            <div class="state_list">
+              <ul>
+                <li><a href="#">全部状态</a></li>
+                <li><a href="#">等待付款</a></li>
+                <li><a href="#">等待收货</a></li>
+                <li><a href="#">已完成</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header_orderoperation fl">
+            操作
+          </div>
+        </div>
+        <div class="" id="listitem_div">
+            <div class="list-item" id="model_list_item">
+              <div class="list-item-1">
+                <span class="order-time">2016-10-03 09:17:57</span>
+                <span>订单号：</span>
+                <span class="order-number">2343245265643452</span>
+              </div>
+              <div class="list-item-2 clearfix">
+                <div class="item-detail fl">
+                  <a href="" class="img_a"><img src="sr_images/542d0798N19d42ce3.jpg" alt="" class="order-goods-img img_p200"/></a>
+                  <a href="" class="order-goods-name">华为P8手机，一华为P8手机，一款非常好的华为P8手机，一款非常好的款非常好的实用性很浅的手机</a>
+                  <div class="goods-count">
+                    x<span class="count">1</span>
+                  </div>
+                </div>
+                <div class="item-receiver fl">
+                  胡不归
+                </div>
+                <div class="item-total fl">
+                  ￥<span class="allMoney">2200</span>.00
+                </div>
+                <div class="item-state fl">
+                  已完成
+                </div>
+                <div class="item-operation fl">
+                  <a href="#" class="rebuy">立即购买</a>
+                  <a href="#" class="add-comment">评价</a>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src = "js/init_myorders.js"></script>
+    <!-- 底部栏 -->
+    <footer class="clearfix">
+        <div class="footerlogo fl">
+            <img src="images/footerlogo.jpg" alt="" />
+        </div>
+        <div class="foot_link fl">
+            <dl class="link_company">
+                <dt>公司</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/us" target="_blank">关于我们</a></dd>
+                <dd><a rel="nofollow" href="http://job.mogujie.com/social" target="_blank">招聘信息</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/about" target="_blank">联系我们</a></dd>
+            </dl>
+            <dl class="link_consumer">
+                <dt>消费者</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help" target="_blank">消费者服务</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help/contactus?con=%27callservice%27" target="_blank">意见反馈</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/apps/mobile" target="_blank">手机版下载</a></dd>
+            </dl>
+            <dl class="link_business">
+                <dt>商家</dt>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/joinmarket" target="_blank">商家入驻</a></dd>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/shopadmin/shopface" target="_blank">商家后台</a></dd>
+                <dd><a rel="nofollow" href="http://peixun.xiaodian.com" target="_blank">蘑菇商学院</a></dd>
+                <dd><a rel="nofollow" href="http://bbs.xiaodian.com" target="_blank">商家社区</a></dd>
+            </dl>
+        </div>
+    </footer>
+  </body>
+</html>

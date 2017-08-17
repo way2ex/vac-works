@@ -1,0 +1,74 @@
+html,body {height:100%;margin:0;}
+#body {width:980px;
+height:100%;
+border:1px solid #222222;
+margin:5px auto;}
+
+#nav {border:1px solid red;overflow:hidden;}
+#nav li {float:left;list-style:none;}
+#nav li a {
+	color:black;
+	text-decoration:none;
+	padding:5px 10px;
+	text-align:center;
+	background-color:#ececec;
+	display:block;
+}
+
+#nav li a:hover {
+	background-color:#bbbbbb;
+	color:#fff;
+}
+
+ul#nav2,#nav2 ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#nav2 li {
+	padding:5px 6px;
+	float:left;
+	width:160;
+	position:relative;
+}
+#nav2 li ul {
+	position:absolute;
+	display:none;
+	top:20px;
+}
+.subitem {
+	display:block;
+}
+.subitem:hover {
+	background-color:blue;
+}
+#nav2 li:hover ul { display:block;}
+#nav2 li:hover ul a {
+	display:block;
+	min-width:80px;
+}
+/* 下面是纵向下拉菜单 */
+#nav3 {clear:left;list-style:none;}
+#nav3 li {
+	position:relative;
+	width:80px;
+	border:1px solid red;
+}
+#nav3 li ul {
+	border:1px solid green;
+	display:none;
+	position:absolute;
+	top:0px;
+	left:80px;
+	padding:0; 
+}
+#nav3 li:hover ul {display:block;}
+#nav3 li ul li {
+	text-align:left;
+	position:relative;
+	border:1px solid blue;
+	margin:0;
+	width:80px;
+}
+.subitem1 {list-style:none;}
+.ad {display:inline;}

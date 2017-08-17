@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>商品搜索_追梦者</title>
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/reset.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/researchresult.css" media="screen" title="no title">
+  </head>
+  <body>
+    <!-- top of page -->
+    <div class="sup-pagetop outerdiv clearfix">
+        <div class="pagetop innerdiv clearfix" id="pagetop">
+            <a href="index.html" class="home fl">追梦者首页</a>
+            <ul class="fr ul-h" id="pagetop-ul">
+              <li class="topli" id="topli_register"><a href="register.html" >注册</a></li>
+              <li class="topli" id="topli_login"><a href="login.html" >登陆</a></li>
+              <li class="topli has-line my-order"><a href="myorders.html">我的订单</a></li>
+              <li class="topli has-line shopping-cart"><a href="cart.html">购物车</a></li>
+              <li class="topli has-line has-icon custom-service"><a href="#">客户服务</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/checklogin.js"></script>
+    <!-- top logo and search -->
+    <div class=" outerdiv clearfix">
+        <div class="top-search innerdiv clearfix">
+            <div id="logo">
+                <a href="index.html"></a>
+            </div>
+            <div id="search-div" class="clearfix">
+                <div class="searchbox clearfix">
+                    <input type="text"  class="fl" id="searchbox">
+                    <input type="button" class="search-btn fl" id="search-btn" value="搜 索">
+                </div>
+                <div id="hot-search">
+                    <a href="#" class="hotword">华为P9</a>
+                    <a href="#" class="hotword">荣耀NOTE8</a>
+                    <a href="#" class="hotword">三星S7</a>
+                    <a href="#" class="hotword">iphone7</a>
+                    <a href="#" class="hotword">小米5S</a>
+                    <a href="#" class="hotword">锤子M1</a>
+                    <a href="#" class="hotword">魅族PRO6</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- div for notation and choose parameters of phone -->
+    <!-- <div id="sr_notation" class="innerdiv">
+      <div class="allresult  inlineblock ">
+        <a href="#" class="">全部结果</a>
+        <span class="right_arrow ">></span>
+      </div>
+      <!-- <a class="inlineblock sr_parameters" href="http:www.baidu.com">
+        <span>品牌:</span>
+        <em>华为(HUAWEI)</em>
+        <i></i>
+      </a>
+      <span class="right_arrow ">></span> -->
+      <!-- <div id="searchkey" class="inlineblock">
+        <strong class="">华为P9</strong>
+      </div>
+    </div> -->
+    <a href="#"><img class="innerdiv" id="huaweipng" src="sr_images/huaweipng.jpg" alt="" /></a>
+    <!-- div for the list of the parameters -->
+    <div class="sr_brand innerdiv paramdiv">
+      <div class="brand_param">
+        <strong>品牌：</strong>
+      </div>
+      <ul class="sr_paramul">
+        <li><a href="" class="a_sort para_checked">全部</a></li>
+        <li><a href="" class="a_sort">华为(HUAWEI)</a></li>
+        <li><a href="" class="a_sort">三星(SamSung)</a></li>
+        <li><a href="" class="a_sort">小米(XIAOMI)</a></li>
+        <li><a href="" class="a_sort">苹果(iPhone)</a></li>
+        <li><a href="" class="a_sort">魅族(MEIZU)</a></li>
+        <li><a href="" class="a_sort">vivo</a></li>
+        <li><a href="" class="a_sort">努比亚(nubia)</a></li>
+        <li><a href="" class="a_sort">乐视(Le)</a></li>
+        <li><a href="" class="a_sort">中兴(ZTE)</a></li>
+        <li><a href="" class="a_sort">OPPO</a></li>
+      </ul>
+    </div>
+    <div class="innerdiv paramdiv">
+      <div class="otherparam">
+        <strong>价格：</strong>
+      </div>
+      <ul class="sr_paramul">
+        <li><a href="" class="a_price para_checked">全部</a></li>
+        <li><a href="" class="a_price">0-999</a></li>
+        <li><a href="" class="a_price">1000-1499</a></li>
+        <li><a href="" class="a_price">1500-1999</a></li>
+        <li><a href="" class="a_price">2000-2999</a></li>
+        <li><a href="" class="a_price">3000-4999</a></li>
+        <li><a href="" class="a_price">5000+</a></li>
+      </ul>
+    </div>
+    <!-- <div class="innerdiv paramdiv">
+      <div class="otherparam">
+        屏幕尺寸：
+      </div>
+      <ul class="screen">
+        <li><a href="#">4.5-5.0英寸</a></li>
+        <li><a href="#">5.1-5.5英寸</a></li>
+        <li><a href="#">5.6英寸以上</a></li>
+      </ul>
+    </div> -->
+    <div class="innerdiv paramdiv" >
+      <div class="otherparam">
+        <strong>网络：</strong>
+      </div>
+      <ul class="sr_paramul">
+        <li><a href="" class="a_network para_checked">全部</a></li>
+        <li><a href="#" class="a_network">全网通</a></li>
+        <li><a href="#" class="a_network">移动4G</a></li>
+        <li><a href="#" class="a_network">联通4G</a></li>
+        <li><a href="#" class="a_network">电信4G</a></li>
+        <li><a href="#" class="a_network">移动3G</a></li>
+        <li><a href="#" class="a_network">联通3G</a></li>
+        <li><a href="#" class="a_network">电信3G</a></li>
+      </ul>
+    </div>
+    <div class="sr_resultlist innerdiv" id="sr_resultlist">
+      <!--<div class="sr_resultitem">
+        <a href="#"><img src="sr_images/goods1.jpg" alt="" /></a>
+        <div class="sr_goodsprice">
+          <em>￥</em>
+          <i>999.00</i>
+        </div>
+        <a class="goodsname" href="#">
+          <em>华为</em>
+          <i>畅想5S 金色 移动4G手机 双卡双待</i>
+        </a>
+        <div class="commentperson">
+          <span>已有</span>
+          <strong>23万+</strong>
+          <span>人评价</span>
+        </div>
+      </div> -->
+    </div>
+    <script type="text/javascript" src = "js/requireresults.js" id="paramdiv"></script>
+
+    <!-- 底部栏 -->
+    <footer class="clearfix">
+        <div class="footerlogo fl">
+            <img src="images/footerlogo.jpg" alt="" />
+        </div>
+        <div class="foot_link fl">
+            <dl class="link_company">
+                <dt>公司</dt>
+                <dd><a rel="nofollow" target="_blank">关于我们</a></dd>
+                <dd><a rel="nofollow" target="_blank">招聘信息</a></dd>
+                <dd><a rel="nofollow" target="_blank">联系我们</a></dd>
+            </dl>
+            <dl class="link_consumer">
+                <dt>消费者</dt>
+                <dd><a rel="nofollow" target="_blank">消费者服务</a></dd>
+                <dd><a rel="nofollow" target="_blank">意见反馈</a></dd>
+                <dd><a rel="nofollow" target="_blank">手机版下载</a></dd>
+            </dl>
+            <dl class="link_business">
+                <dt>商家</dt>
+                <dd><a rel="nofollow"  target="_blank">商家入驻</a></dd>
+                <dd><a rel="nofollow"  target="_blank">商家后台</a></dd>
+                <dd><a rel="nofollow"  target="_blank">追梦商学院</a></dd>
+                <dd><a rel="nofollow" target="_blank">商家社区</a></dd>
+            </dl>
+        </div>
+    </footer>
+  </body>
+</html>

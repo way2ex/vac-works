@@ -1,0 +1,127 @@
+@charset "utf-8"
+html {
+	color:#000;
+	font-size:100%;
+	background:#fff;
+	display:block;
+}
+body {
+	word-break:normal; /*在合适的地方换行*/
+	display:block;
+	font-family: sans-serif,SimSun;
+	font-style:normal;
+	font-weight:normal;
+	font-size:12px;
+	line-height:24px;
+	width:980px;
+	margin:0;
+	padding:0;
+}
+cite {font-style:normal;}
+.login {
+	color:red;
+}
+#login a,input {
+	margin:5px 5px;
+}
+#login a:link {text-decoration:none;}
+#login a:hover {color:red;}
+.pagetop_notice {
+	text-align:right;
+	width:980px;
+	margin:0px auto 2px auto;
+	display:block;
+	border:1px solid red;
+}
+.ad_top{
+	width:980px;
+	margin:auto;
+	margin-bottom:5px;
+}
+.clearfix {display:block;}
+.fl {float:left;}
+.ad_728 {margin-right:2px;}
+
+.header {
+	width:980px;
+	margin:auto;
+	margin-bottom:5px;
+}
+.header div {display:inline-block;margin-left:3px;}
+
+.nav {width:980px;margin:auto auto;}
+.nav_menu {margin:0;padding:0;}
+.menu {
+	padding-left:0px;
+}
+ul {
+	list-style-type:none;
+	background-color:#c00;
+	padding-left:5px;
+	overflow:hidden; }
+.menu li a{
+	font-size:16px;
+	font-family:"MicroSoft YaHei";
+	
+}
+li {display:list-item;float:left;padding:0;}
+a {text-decoration:none;}
+.nav_menu .menu a {
+	color:white; 
+	display: inline-block;
+	text-align:center;
+	padding:8px 8px 8px 8px;}
+.nav_menu .menu a:hover {
+	background-color:#900;
+}
+
+li.nav_more {
+	padding:0 10px;
+	background-image:url(../nav_more_nor.png);
+	width:25px;
+	height:40px;
+	display:block;
+	background-position:center center;
+	background-repeat:no-repeat;
+	position:absolute;
+	right:8px;
+}
+li.nav_more:hover {
+	border-left:1px solid #900;
+	border-top:1px solid #900;
+	border-right:1px solid #900;
+	border-bottom:1px solid white;
+	background-color:white;
+	background-image:url(../nav_more_act.png)}
+li.nav_more #nav_more_content {
+	width:600px;
+	height:600px;
+	border-left:1px solid #900;
+	border-bottom:1px solid #900;
+	border-right:1px solid #900;
+	background-color:white;
+	position:absolute; 
+	top:39px;
+	right:0px;
+	display:none;
+}
+li.nav_more:hover #nav_more_content {display:block;right:-1px;}
+.nav_more_content {
+	background-color:white;
+	font-family:"MicroSoft YaHei";
+	font-size:16px;
+	line-height:26px;
+}
+.nav_more_content li {
+	float:left;
+	height:auto;
+	width:100px;
+	margin-right:18px;
+}
+.nav_more_content h4,a{
+	color:black;
+	font-weight:normal;
+	border-bottom:1px solid black;
+}
+
+.ad {display:inline;}

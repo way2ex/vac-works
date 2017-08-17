@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>注册_追梦者</title>
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/reset.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div class="div-900 clearfix">
+      <a href="index.html"><img src="images/canvas.png" alt="Dreamer 追梦者" /></a>
+    </div>
+    <div class="div-900 clearfix">
+      <img id = "pic" class="fl" src="images/register-pic2.jpg" alt="Dreamer 追梦者" />
+      <div id="register-div" class="fl">
+        <p>
+          新用户注册
+        </p>
+        <form class="register-form" action="register.php" method="post">
+          <div class="">
+            <span>账&nbsp;&nbsp;&nbsp;号:&nbsp;</span>
+            <input type="text" id="register-username"/>
+          </div>
+          <div class="">
+            <span>密&nbsp;&nbsp;&nbsp;码:&nbsp;</span>
+            <input type="password" id="register-password"/>
+          </div>
+          <span id="register_note">请输入用户名和密码</span>
+          <input type="button" value="注册" id="register_submit">
+        </form>
+        <a id="login_now" href="login.html">已有账号，直接登陆</a>
+      </div>
+    </div>
+    <footer class="register">
+      <div class="footer_note">
+        <a>关于我们</a>
+        <a>联系我们</a>
+        <a>人才招聘</a>
+        <a>广告服务</a>
+        <a href="#">友情链接</a>
+        <a href="#">新手帮助</a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/register.js">
+    </script>
+  </body>
+</html>

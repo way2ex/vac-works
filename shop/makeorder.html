@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>确认订单_追梦者</title>
+    <link rel="stylesheet" href="style/goodsdetail.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/reset.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title">
+  </head>
+  <body>
+    <!-- top of page -->
+    <div class="sup-pagetop outerdiv clearfix">
+        <div class="pagetop carttop clearfix" id="pagetop">
+            <a href="index.html" class="home fl">追梦者首页</a>
+            <ul class="fr ul-h" id="pagetop-ul">
+                <li class="topli" id="topli_register"><a href="register.html">注册</a></li>
+                <li class="topli" id="topli_login"><a href="login.html">登陆</a></li>
+                <li class="topli has-line my-order"><a href="myorders.html">我的订单</a></li>
+                <li class="topli has-line shopping-cart"><a href="cart.html">购物车</a></li>
+                <li class="topli has-line has-icon custom-service"><a href="">客户服务</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- top logo and search -->
+    <div class=" div-990 clearfix">
+        <div class="top-search div-990 clearfix">
+            <div id="logo">
+                <a href="index.html"></a>
+            </div>
+        </div>
+    </div>
+    <!-- div to show if the user didn't login -->
+    <div class="nologindiv div-900" id="notation_login">
+        <span>
+        </span> 您还没有登陆！
+        <a href="login.html">立即登陆</a>
+    </div>
+
+    <!-- div for choose address  -->
+    <div class="makeorder_address div-990 clearfix" >
+      <h3>
+        选择收获地址
+      </h3>
+      <div class="address_list div-990 clearfix"  id="makeorder_address">
+        <div class="address_item  fl" id="modeldiv_address">
+          <div class="item_name">
+            <span class="addressitem_province">北京</span>
+            <span class="addressitem_city">北京市</span>
+            <span><span class="addressitem_name">胡不归vac</span>收</span>
+          </div>
+          <div class="item_address">
+            <span class="addressitem_dist">海淀区</span>
+            <span class="addressitem_town">北太平庄</span>
+            <span class="street">西土城10号北京邮电大学</span>
+            <span class="phone">18812284483</span>
+          </div>
+          <div class="item_toolbar">
+            <a href="" class="modify_address">修改</a>
+          </div>
+          <div class="item_curMarker">
+          </div>
+        </div>
+
+        <!-- <div class="address_item fl ">
+          <div class="item_name">
+            <span class="addressitem_province">北京</span>
+            <span class="addressitem_city">北京市</span>
+            <span class="addressitem_name">胡不归vac收</span>
+          </div>
+          <div class="item_address">
+            <span class="addressitem_dist">海淀区</span>
+            <span class="addressitem_town">北太平庄</span>
+            <span class="street">西土城10号北京邮电大学</span>
+            <span class="phone">18812284483</span>
+          </div>
+          <div class="item_toolbar">
+            <a href="#" class="modify_address">修改</a>
+          </div>
+          <div class="item_curMarker">
+          </div>
+        </div>
+        <div class="address_item fl ">
+          <div class="item_name">
+            <span class="addressitem_province">北京</span>
+            <span class="addressitem_city">北京市</span>
+            <span class="addressitem_name">胡不归vac收</span>
+          </div>
+          <div class="item_address">
+            <span class="addressitem_dist">海淀区</span>
+            <span class="addressitem_town">北太平庄</span>
+            <span class="street">西土城10号北京邮电大学</span>
+            <span class="phone">18812284483</span>
+          </div>
+          <div class="item_toolbar">
+            <a href="#" class="modify_address">修改</a>
+          </div>
+          <div class="item_curMarker">
+          </div>
+        </div>
+        <div class="address_item fl">
+          <div class="item_name">
+            <span class="addressitem_province">北京</span>
+            <span class="addressitem_city">北京市</span>
+            <span class="addressitem_name">胡不归vac收</span>
+          </div>
+          <div class="item_address">
+            <span class="addressitem_dist">海淀区</span>
+            <span class="addressitem_town">北太平庄</span>
+            <span class="street">西土城10号北京邮电大学</span>
+            <span class="phone">18812284483</span>
+          </div>
+          <div class="item_toolbar">
+            <a href="#" class="modify_address">修改</a>
+          </div>
+          <div class="item_curMarker">
+          </div>
+        </div>
+        <div class="address_item fl">
+          <div class="item_name">
+            <span class="addressitem_province">北京</span>
+            <span class="addressitem_city">北京市</span>
+            <span class="addressitem_name">胡不归vac收</span>
+          </div>
+          <div class="item_address">
+            <span class="addressitem_dist">海淀区</span>
+            <span class="addressitem_town">北太平庄</span>
+            <span class="street">西土城10号北京邮电大学</span>
+            <span class="phone">18812284483</span>
+          </div>
+          <div class="item_toolbar">
+            <a href="#" class="modify_address">修改</a>
+          </div>
+          <div class="item_curMarker">
+          </div>
+        </div> -->
+      </div>
+      <div class="new_address" style="display:none;">
+        <input type="button" name="" value="使用新地址" id= "new_address">
+      </div>
+      <h3>
+        确认订单信息
+      </h3>
+      <div class="div-990" id="makeorder_goodslist">
+        <!-- div for all the orders -->
+        <div class="cart_ordertitle div-990">
+            <span class="confirmorder_goods">
+              商品
+            </span>
+            <span class="confirmorder_param">参数</span>
+            <span class="confirmorder_price">单价(元)</span>
+            <span class="confirmorder_count">数量</span>
+            <span class="confirmorder_total">小计(元)</span>
+        </div>
+        <div class="" id="goodsdiv">
+            <div class="cart_ordergoods div-990" id="modeldiv_goods">
+                <div class="ordergoods_detail">
+                    <a href="" class="p200div"><img class="p200" src="sr_images/566942bdN447abba1.jpg" alt="" /></a>
+                    <div class="ordergoods_detail1">
+                        <a href="" class="goods_detailtitle">荣耀 畅玩5X 破晓银 移动4G手机 双卡双待</a>
+                    </div>
+                </div>
+                <div class="confirmgoods_param">
+                    <div class="confirmgoods_param_1">
+                        颜色：<span class="param_color">破晓银</span>
+                    </div>
+                    <div class="confirmgoods_param_2">
+                        网络：<span class="param_network">移动4G</span>
+                    </div>
+                </div>
+                <div class="confirmgoods_price">
+                    <span>￥<span class="ordersgoods_singleprice">999</span>.00</span>
+                </div>
+                <div class="ordergoods_count">
+                  <span class="ordergoods_count1">1</span>
+                </div>
+                <div class="confirmgoods_total">
+                    <strong>￥<strong class="ordersgoods_totalprice">999</strong>.00</strong>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="gobalance div-990 clearfix">
+          <a href="#" class="fr">
+            <b class="gobalance_go fr">
+              提交订单
+            </b>
+          </a>
+          <div class="gobalance_total fr">
+            共付费
+            <span>￥<em class="ordersgoods_totalmoney">0</em>.00</span>
+            元
+          </div>
+          <div class="fr gobalance_goods">
+            共 <span class="gobalance_goodscount">0</span> 件商品
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部栏 -->
+    <footer class="clearfix">
+        <div class="footerlogo fl">
+            <img src="images/footerlogo.jpg" alt="" />
+        </div>
+        <div class="foot_link fl">
+            <dl class="link_company">
+                <dt>公司</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/us" target="_blank">关于我们</a></dd>
+                <dd><a rel="nofollow" href="http://job.mogujie.com/social" target="_blank">招聘信息</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/about" target="_blank">联系我们</a></dd>
+            </dl>
+            <dl class="link_consumer">
+                <dt>消费者</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help" target="_blank">消费者服务</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help/contactus?con=%27callservice%27" target="_blank">意见反馈</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/apps/mobile" target="_blank">手机版下载</a></dd>
+            </dl>
+            <dl class="link_business">
+                <dt>商家</dt>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/joinmarket" target="_blank">商家入驻</a></dd>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/shopadmin/shopface" target="_blank">商家后台</a></dd>
+                <dd><a rel="nofollow" href="http://peixun.xiaodian.com" target="_blank">蘑菇商学院</a></dd>
+                <dd><a rel="nofollow" href="http://bbs.xiaodian.com" target="_blank">商家社区</a></dd>
+            </dl>
+        </div>
+    </footer>
+
+    <div class="thick" id="thick">
+        <div class="" id="thickbox">
+            <div class="thickbox_title">
+                <span>编辑收货地址</span>
+                <a  href="" id="close_thick"></a>
+            </div>
+            <form class="addressDetail_div">
+                <div class="item_receiver item">
+                    <span class="label"><i>*</i>收货人:</span>
+                    <div class="">
+                        <input type="text" name="receiver" value="" id="receiver">
+                    </div>
+                </div>
+                <div class="item_address item">
+                    <span class="label"><i>*</i>所在地区：</span>
+                    <div class="">
+                        <select class="" name="province" id="select_province">
+                            <option value="0">请选择</option>
+                            <option value="1">北京</option>
+                            <option value="2">天津</option>
+                            <option value="3">上海</option>
+
+                        </select>
+                        <select class="" name="city" id="select_city">
+                            <option value="0">请选择</option>
+                        </select>
+                        <select class="" name="dist" id="select_dist">
+                            <option value="0">请选择</option>
+                        </select>
+                        <select class="" name="town" id="select_town">
+                            <option value="0">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="item_detail item">
+                    <span class="label"><i >*</i>详细地址：</span>
+                    <div class="">
+                        <input type="text" name="" value="" id="detailAddress">
+                    </div>
+                </div>
+                <div class="item_phone item">
+                    <span class="label"><i>*</i>电话号码：</span>
+                    <div class="">
+                        <input type="text" name="" value="" id="phone">
+                    </div>
+                </div>
+                <div class="">
+                    <input type="button"value="保存收货地址" id="saveAddress">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- div to show when use the new address -->
+    <script type="text/javascript" src = "js/addressArray.js"></script>
+    <script type="text/javascript" src = "js/init_makeorder.js"></script>
+    <script type="text/javascript" src="js/functionForAddress.js"></script>
+  </body>
+</html>

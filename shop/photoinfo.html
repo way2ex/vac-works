@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+    <title>头像照片_追梦者</title>
+    <link rel="stylesheet" href="style/reset.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style/goodsdetail.css" media="screen" title="no title">
+  </head>
+  <body class="body_userinfo">
+      <!-- top of page -->
+      <div class="sup-pagetop outerdiv clearfix">
+          <div class="pagetop carttop clearfix" id="pagetop">
+              <a href="index.html" class="home fl">追梦者首页</a>
+              <ul class="fr ul-h" id="pagetop-ul">
+                  <li class="topli" id="topli_register"><a href="register.html">注册</a></li>
+                  <li class="topli" id="topli_login"><a href="login.html">登陆</a></li>
+                  <li class="topli has-line my-order"><a href="myorders.html">我的订单</a></li>
+                  <li class="topli has-line shopping-cart"><a href="cart.html">购物车</a></li>
+                  <li class="topli has-line has-icon custom-service"><a href="">客户服务</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- top logo and search -->
+      <div class=" outerdiv clearfix biglogo_div">
+          <div class="top-search div-990 clearfix">
+              <div id="logo">
+                  <a href="index.html"></a>
+              </div>
+          </div>
+      </div>
+    <!-- div to show if the user didn't login -->
+    <div class="nologindiv div-900" id="notation_login">
+        <span>
+        </span> 您还没有登陆！
+        <a href="login.html">立即登陆</a>
+    </div>
+    <!-- div for the tab -->
+    <div class="div-990 userinfo" id="userinfo" style="display:none;">
+      <ul class="userinfo_tabul">
+        <li class="userinfo_li "><a href="userinfo.html">基本信息</a></li>
+        <li class="userinfo_li tab_checked"><a href="photoinfo.html" >头像照片</a></li>
+        <li class="userinfo_li "><a href="address.html">收货地址</a></li>
+      </ul>
+      <div class="photoinfo">
+        <form class="uploadbutton" action="php/upload_photo.php" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" value="选择上传的头像" id="upload_photo"/>
+          <input type="button" value="上传" id="submit_photo">
+        </form>
+        <div class="photo_note">
+          仅支持JPG、GIF、PNG、JPEG、BMP格式，文件小于4M
+        </div>
+        <div class="show_photo">
+          <img class="" src="sr_images/detail4.jpg" id="the_photo">
+          </img>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- 底部栏 -->
+    <footer class="clearfix">
+        <div class="footerlogo fl">
+            <img src="images/footerlogo.jpg" alt="" />
+        </div>
+        <div class="foot_link fl">
+            <dl class="link_company">
+                <dt>公司</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/us" target="_blank">关于我们</a></dd>
+                <dd><a rel="nofollow" href="http://job.mogujie.com/social" target="_blank">招聘信息</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/about" target="_blank">联系我们</a></dd>
+            </dl>
+            <dl class="link_consumer">
+                <dt>消费者</dt>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help" target="_blank">消费者服务</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/help/contactus?con=%27callservice%27" target="_blank">意见反馈</a></dd>
+                <dd><a rel="nofollow" href="http://www.mogujie.com/apps/mobile" target="_blank">手机版下载</a></dd>
+            </dl>
+            <dl class="link_business">
+                <dt>商家</dt>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/joinmarket" target="_blank">商家入驻</a></dd>
+                <dd><a rel="nofollow" href="http://www.xiaodian.com/pc/shopadmin/shopface" target="_blank">商家后台</a></dd>
+                <dd><a rel="nofollow" href="http://peixun.xiaodian.com" target="_blank">蘑菇商学院</a></dd>
+                <dd><a rel="nofollow" href="http://bbs.xiaodian.com" target="_blank">商家社区</a></dd>
+            </dl>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/init_info2.js"></script>
+  </body>
+</html>

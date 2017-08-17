@@ -1,0 +1,614 @@
+html{height: 100%;}
+body {
+  height: auto;
+  display: block;
+  width:980px;
+  margin:0 auto;
+  word-break:normal; /*在合适的地方换行*/
+	font-family: sans-serif,SimSun;
+	font-style:normal;
+	font-weight:normal;
+	font-size:12px;
+	line-height:24px;
+	padding:0;
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+.pagetop_notice {
+  text-align: right;
+}
+.pagetop_notice .login{
+  color:red;
+  margin:0 5px;
+}
+.pagetop_notice a{
+  text-decoration: none;
+  margin: 0 2px;
+}
+.pagetop_notice input{
+  background-image: url(../pic_csdn/search.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+/*top_ad*/
+.ad_top {padding: 0;font-size: 0;
+  margin:4px 1px;}
+.ad1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+div.ad1 img {padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: bottom;
+}
+/*nav header*/
+.nav {
+  margin: 4px 1px;
+}
+.nav ul {
+  list-style: none;
+  background-color: #c00;
+  padding-left: 2px;
+  font-size: 0;
+  position: relative;
+}
+.nav li {
+  display: inline-block;;
+  padding:0px;
+  margin: 0;
+}
+.nav a {
+  display: block;
+  padding: 8px 8px;
+  text-decoration: none;
+  color: white;
+  font: normal 16px/26px "MicroSoft YaHei";
+}
+.nav a:hover{
+  background-color: #900;
+}
+/*nav_more*/
+li.nav_more{
+  width: 50px;
+  height: 42px;
+  vertical-align: bottom;
+  position:absolute;
+  right:0px;
+  z-index: 1;
+}
+div.nav_more{position: relative;}
+div.nav_more:hover #nav_more{
+  height: 44px;       /*多出4px*/
+  background-color: white;
+  background-image: url(../pic_csdn/nav_more_normal.png);
+  border-top: 2px solid #900;
+  border-right: 2px solid #900;
+  border-left: 2px solid #900;
+}
+div.nav_more:hover ul{
+  display: block;
+}
+a#nav_more {
+  height: 42px;
+  padding:0;
+  margin:0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../pic_csdn/nav_more_active.png);
+}
+/*dropdown content*/
+.nav_more ul a{
+  color: #000;
+  background-color: white;
+  font:normal 12px/24px "MicroSoft YaHei";
+  border-bottom: 1px solid #ccc;
+  padding: 3px 0;
+}
+.nav_more ul a:hover{
+  color: red;
+  background-color: white;
+}
+.nav_more h4{
+    font-size: 16px;
+    padding: 2px 8px;
+    margin-top:8px;
+    margin-bottom:0px;
+    border-bottom: 1px solid #333;
+}
+.nav_more ul h4,.nav_more ul a{
+  margin-left: 10px;
+}
+.nav_more ul{
+  width:450px;
+  background-color:#fff;
+  position:absolute;
+  top: 44px;
+  right:0;
+  border: 2px solid #900;
+  border-top: 2px solid #900;
+  z-index: -1;
+  display: none;
+}
+div.nav_more li{
+  width:100px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+/*submenu*/
+.nav_submenu ul{
+  font-size: 0;
+  padding:0px 35px;
+  background-color: #fee;
+}
+.nav_submenu li{
+  line-height:28px;
+  padding:0px 0px;
+}
+.nav_submenu ul a{
+  color: #333;
+  font:normal 12px/24px Helvetica, Tahoma, Arial, sans-serif;
+  display: block;
+  padding: 5px 6px 0 6px;
+}
+.nav_submenu a:hover{
+  color: red;
+  background-color: transparent;
+}
+/*content*/
+.content{
+  width:980px;
+}
+.main{
+  width:649px;
+  border-right:1px solid #ddd;
+  padding: 1px 5px;
+  display: inline-block
+}
+.news{
+  /*position: relative;*/
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  width:649px;
+}
+.clearfix:after{
+  content:".";
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  display: block;
+}
+/*news_left*/
+.news_left {
+  float: left;
+  width：380px;
+  padding: 0;
+  margin: 0;
+}
+.news_left ul{
+  list-style: none;
+  font: normal 14px/24px "MicroSoft YaHei";
+  color:
+  margin: 0;
+  padding: 0;
+}
+.news_left ul a{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font: normal 14px/24px Helvetica,
+  Tahoma, Arial, sans-serif;
+}
+.news_left dl{
+  width: 380px;
+}
+.news_left dt a{
+  text-decoration: none;
+  color: #333;
+  font: normal 28px/36px "MicroSoft YaHei";
+  margin: 0 0px;
+}
+.news_left a{
+  display: block;
+}
+.news_left dd{
+  font: normal 14px/24px "MicroSoft YaHei";
+  color: #888;
+  padding: 10px 0px 10px 0;;
+  margin: 0 0px;
+  border-bottom: 1px solid #ddd;
+}
+.news_list{
+  display: block;
+  float: left;
+  width：250px;
+  margin: 0 8px 0 10px;
+}
+.news_list ul{
+  display: block;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font: normal 12px/24px "MicroSoft YaHei";
+}
+.news_list ul li{
+  margin: 0;
+  display: list-item;
+  width: 250px;
+  border-bottom: 1px dotted #888;
+  padding: 10px 0;
+}
+#last_li {
+  border-bottom:none;
+}
+.news_list ul a{
+  font: normal 16px/24px "MicroSoft YaHei";
+  text-decoration:none;
+  color: #333;
+  padding: 0;
+}
+.more {
+  padding:1px 10px 1px 3px;
+  background-color: #900;
+  color: white;
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+}
+/*news*/
+.ad_news {
+  width:660px;
+  padding: 10px 0px;
+}
+/*ad_news*/
+.left {
+  width: 230px;
+  float: left;
+  display: block;
+}
+.left .box_ul {
+  margin:0;
+  display: block;
+}
+.left h2{
+  margin: 5px 0px;
+  display: block;
+  font: normal 18px/30px "MicroSoft YaHei";
+  border-bottom: 2px solid #000;
+}
+.left h2 a{
+  text-decoration: none;
+  color:#900;
+}
+.hot_blog ul{
+  background: url(../pic_csdn/y.png) 5px -1270px no-repeat;
+}
+.hot_blog li{
+  list-style: none;
+  padding: 0px 0px 0px 0;;
+  margin: 0;
+  width: 180px;
+  height: 44px;
+  margin-bottom: 20px;
+}
+.hot_blog li a{
+  text-decoration: none;
+  display: block;
+  color: #333;
+  font: normal 16px/22px "MicroSoft YaHei";
+}
+.special dt a{
+      font: normal 16px/24px Helvetica, Tahoma, Arial, sans-serif;
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding-bottom: 10px;
+}
+dt a:hover{
+  color: red;
+}
+.special dl{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+dd {
+  padding: 0;
+  margin: 0;
+}
+/*special*/
+.hot_paper li img{
+  width:75px;
+  height: 75px;
+  margin-right: 10px;
+  float: left;
+  clear: left;
+  display: inline;
+}
+.hot_paper li a{
+  text-decoration: none;
+  font: normal 16px/22px "MicroSoft YaHei";
+  color: #333;
+  display: block;
+  position: relative;
+}
+.hot_paper ul{
+  padding: 0;
+}
+.hot_paper li{
+  display: list-item;
+  list-style: none;
+  clear: left;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+.hot_paper li:after{
+  content:".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+/*left*/
+.center {
+  width:395px;
+  margin: 0 3px 0 18px;
+  display: block;
+  float: left;
+  color: #777;
+}
+.center h2{
+  margin: 5px 0px;
+  color:#900;
+  display: block;
+  font: normal 18px/30px "MicroSoft YaHei";
+  border-bottom: 2px solid #000;
+}
+.center h3{
+  font: normal 18px/28px "MicroSoft YaHei";
+  margin: 10px 0;;
+}
+.center a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.center a:hover{color: red;}
+.center ul{
+  padding: 0;
+}
+.center ul li{
+  list-style: none;
+  padding-bottom: 15px;
+  margin: 0;
+  border-bottom: 1px dotted #ddd;
+}
+.center ul li.ad_flow_text {
+  border: 1px dotted #888;
+  display: block;
+  margin: 10px 2px;
+  padding: 10px 15px;
+}
+.ad_flow_text a{
+  font: bold 14px/24px Helvetica, Tahoma, Arial, sans-serif;
+}
+#center{
+  text-align: center;
+  clear: both;
+}
+#center a{
+  float: none;
+  font: normal 18px/28px "MicroSoft YaHei";
+  background-color:transparent;
+}
+
+/*content*/
+.footer_nav{
+  font: normal 12px/24px Helvetica, Tahoma, Arial, sans-serif;
+  margin-top: 10px;
+}
+.footer_nav h4{
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: normal;
+}
+.footer_nav a{
+  text-decoration: none;
+  color: #333;
+}
+.classify {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.classify a{
+  padding:0 10px;
+}
+.footer_nav a:hover,.left a:hover,.footer a:hover{
+  color: red;
+}
+.service {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.service a{
+  font-size: 14px;
+  line-height: 40px;
+  float: left;
+  display: block;
+  height: 25px;
+  padding-left: 30px;
+  margin-right: 25px;
+}
+
+.footer {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.backblue a{
+  display: inline-block;
+  padding:5px 5px;
+}
+.footer dd,dl{
+  margin: 0;
+}
+.qq{
+  background-image: url(../pic_csdn/pic_footer_icon.png);
+  background-position: -17px -111px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 17px;
+  margin-right: 15px;
+}
+.qq:hover{
+  background-position: -17px -138px;
+}
+.weibo {
+  background-image: url(../pic_csdn/pic_footer_icon.png);
+  background-position: -13px -52px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 22px;
+  margin-right: 15px;
+}
+.weibo:hover{
+    background-position: -12px -81px;
+}
+.email{
+  background-image: url(../pic_csdn/pic_footer_icon.png);
+  background-position: -17px -220px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 17px;
+  margin-right: 15px;
+}
+.email:hover{
+    background-position: -17px -248px;
+}
+.phone{
+  background-image: url(../pic_csdn/pic_footer_icon.png);
+  background-position: -17px -0px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 20px;
+  margin-right: 15px;
+}
+.phone:hover{
+  background-position: -17px -28px;
+}
+#footer_dd{
+  color:#333;
+}
+.sidebar {
+  display: inline-block;
+  width: 300px;
+  margin-left: 0px;
+  margin-top: 0px;
+  vertical-align: top;
+  /*float: right;*/
+}
+.sidebar a{
+  margin-top: 0;
+  display: block;
+  vertical-align: top;
+}
+.quick {
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 5px;
+}
+.sidebar h2{
+  font:normal 18px/30px "MicroSoft YaHei";
+  border-bottom: 2px #333 solid;
+  margin-bottom: 15px;
+  color: #c00;
+  display: block;
+}
+.sidebar h2 .more{
+  float:right;
+  color:#c00;text-decoration: none;
+  font-size: 12px;
+  display: inline;
+  background-color: transparent;
+}
+.quick dt,dl,dd{
+  margin: 0;
+  padding: 0;
+}
+.quick dt{
+  width: 60px;
+  float: left;
+  clear:right;
+  font-weight: bolder;
+  font-size: 12px;
+}
+.quick dd a{
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+  font:normal 12px/24px Helvetica, Tahoma, Arial, sans-serif;
+}
+.sidebar dd a:hover{
+  color:red;
+}
+.quick dd{
+  float: right;
+  width: 240px;
+}
+
+.enterprice img{
+  width: 90px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+.enterprice{
+  color: #888;
+}
+.enterprice h4{
+  margin-bottom: 5px;
+    font-weight: bold;
+}
+.enterprice h4 a{
+  text-decoration: none;
+  color: #000;
+  font: bold 14px/24px Helvetica,Tahoma,Arial,Sans-serif;
+}
+.enterprice div.div{
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+}
+.enterprice dd.div{
+  clear: both;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ddd;
+}
+.enterprice h2 .h2,.activity h2 .h2{
+  font:normal 18px/30px "MicroSoft YaHei";
+  color: #c00;
+  display: block;
+  text-decoration: none;
+}
+.activity ul{
+  margin: 0;
+  padding: 0;
+}
+.activity li{
+  list-style: none;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+}
+.activity h4{
+  margin: 5px 0;
+  color: #555;
+  font: normal 16px/26px "Helvetica,Tahoma,Arial,sans-serif";
+}
+.activity li a{
+  font-size: 14px;
+  text-decoration: none;
+  color: #888;
+}
