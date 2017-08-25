@@ -7,10 +7,8 @@ var fileMap = {}       // 创建对象
 iterateDir2(filePath, fileMap).then(() => {
     console.log(JSON.stringify(fileMap))
 })
-// setTimeout(() => {
-//     console.log(JSON.stringify(fileMap))
-// }, 15000)
 
+// 没有使用promise的方法
 function iterateDir (filePath, obj) {
     fs.readdir(filePath, (err, files) => {
         if(err) {console.log(err); return}
