@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" href="qrcode-scan.png">
+  <link rel="shortcut icon" href="icon.ico">
+  <title>网页访问器</title>
+  <style>
+    video {
+      display: block;
+      margin: 0 auto;
+      width: 100vw;
+      height: 100vw;
+    }
+    canvas {
+      width: 0px;
+      height: 0px;
+    }
+    #log {
+      font-size: 18px;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript" src="lib/grid.js"></script>
+  <script type="text/javascript" src="lib/version.js"></script>
+  <script type="text/javascript" src="lib/detector.js"></script>
+  <script type="text/javascript" src="lib/formatinf.js"></script>
+  <script type="text/javascript" src="lib/errorlevel.js"></script>
+  <script type="text/javascript" src="lib/bitmat.js"></script>
+  <script type="text/javascript" src="lib/datablock.js"></script>
+  <script type="text/javascript" src="lib/bmparser.js"></script>
+  <script type="text/javascript" src="lib/datamask.js"></script>
+  <script type="text/javascript" src="lib/rsdecoder.js"></script>
+  <script type="text/javascript" src="lib/gf256poly.js"></script>
+  <script type="text/javascript" src="lib/gf256.js"></script>
+  <script type="text/javascript" src="lib/decoder.js"></script>
+  <script type="text/javascript" src="lib/qrcode.js"></script>
+  <script type="text/javascript" src="lib/findpat.js"></script>
+  <script type="text/javascript" src="lib/alignpat.js"></script>
+  <script type="text/javascript" src="lib/databr.js"></script>
+
+  <video id="video" playsinline></video>
+  <div id="log"></div>
+  <canvas id="canvas"></canvas>
+
+  <script>
+    const canvas = document.querySelector('#canvas');
+    const context = canvas.getContext('2d');
+    const video = document.querySelector('#video');
+    const log = document.querySelector('#log');
+    let videoWidth, videoHeight;
+    let i = 0
+
+    try {
+    
+    let timeoutId;
+
+    function scanCode(timeout) {
+      timeoutId = setTimeout(function() {
+        context.drawImage(video, 0, 0, videoWidth, videoHeight, 0, 0, videoWidth, videoHeight);
+        let imgData = canvas.toDataURL();
+        qrcode.decode(imgData);
+      }, timeout || 0);
+    }
+
+    qrcode.callback = function (data) {
+      if (!data.includes('http://') && !data.includes('https://')) {
+        log.innerHTML = data;
+        scanCode(300);
+      } else { log.innerHTML = data;
+        document.location.href = data;
+      }
+    }
+
+    video.onplay = function () {
+      scanCode(500);
+    };
+    video.onloadedmetadata = function () {
+      videoWidth = video.videoWidth;
+      videoHeight = video.videoHeight;
+      canvas.width = videoWidth;
+      canvas.height = videoHeight;
+      log.innerHTML = `height: ${videoHeight}--width: ${videoWidth}`;
+    }
+    // 初始化调用摄像头
+    const videoConstraints = {
+      facingMode: 'environment'
+    };
+    const constraints = {
+      video: videoConstraints,
+      audio: false
+    };
+    const mediaDevices = navigator.mediaDevices;
+    mediaDevices.getUserMedia(constraints)
+      .then(stream => {
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch(err => {
+        log.innerHTML = err;
+      });
+    } catch (err) {
+      log.innerHTML = err;
+    }
+  </script>
+</body>
+
+</html>
